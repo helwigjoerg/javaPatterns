@@ -1,0 +1,13 @@
+To implement the Visitor Design Pattern, we will use the same Composite Pattern code and will 
+introduce some new interfaces, classes and methods to it.
+
+Implementing Visitor Pattern requires two important interfaces, an Element interface which will contain an accept
+ method with an argument of type Visitor. This interface will be implemented by all the classes that need to allow 
+ visitors to visit them. In our case, the HtmlTag will implement the Element interface, as the HtmlTag is the parent
+  abstract class of all the concrete html classes, the concrete classes will inherit and 
+  will override the accept method of the Element interface.
+
+The other important interface is the Visitor interface; this interface will contain visit methods 
+with an argument of a class that implements the Element interface. 
+Please also note that we have added two new methods in our HtmlTag class, the getStartTag and the getEndTag as opposed
+ to the example shown in the Composite Design Pattern lesson.
